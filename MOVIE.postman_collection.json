@@ -1,0 +1,279 @@
+{
+	"info": {
+		"_postman_id": "50f11f3e-6333-406a-a8e8-c7796664dd6d",
+		"name": "MOVIE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get All Movie",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{local}}{{eshaUrl}}/get-all-movie",
+					"host": [
+						"{{local}}{{eshaUrl}}"
+					],
+					"path": [
+						"get-all-movie"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "SUCCESS",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}{{eshaUrl}}/get-all-movie",
+							"host": [
+								"{{local}}{{eshaUrl}}"
+							],
+							"path": [
+								"get-all-movie"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 18 Aug 2023 07:39:54 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 3,\n        \"title\": \"SpiderMan\",\n        \"director\": \"SkyVayne\",\n        \"summary\": \"tentang SpiderMan\",\n        \"genres\": \"Action, Adventure\"\n    },\n    {\n        \"id\": 4,\n        \"title\": \"SpiderMan2\",\n        \"director\": \"SkyVayne\",\n        \"summary\": \"tentang SpiderMan@\",\n        \"genres\": \"Action, Adventure\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Save Movie",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"title\": \"SpiderMan\",\r\n        \"director\": \"SkyVayne\",\r\n        \"summary\": \"tentang SpiderMan\",\r\n        \"genres\": \"Action, Adventure\"\r\n    },\r\n    {\r\n        \"title\": \"SpiderMan2\",\r\n        \"director\": \"SkyVayne\",\r\n        \"summary\": \"tentang SpiderMan@\",\r\n        \"genres\": \"Action, Adventure\"\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{local}}{{eshaUrl}}/save-movie",
+					"host": [
+						"{{local}}{{eshaUrl}}"
+					],
+					"path": [
+						"save-movie"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "SUCCESS",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"title\": \"SpiderMan\",\r\n        \"director\": \"SkyVayne\",\r\n        \"summary\": \"tentang SpiderMan\",\r\n        \"genres\": \"Action, Adventure\"\r\n    },\r\n    {\r\n        \"title\": \"SpiderMan2\",\r\n        \"director\": \"SkyVayne\",\r\n        \"summary\": \"tentang SpiderMan@\",\r\n        \"genres\": \"Action, Adventure\"\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}{{eshaUrl}}/save-movie",
+							"host": [
+								"{{local}}{{eshaUrl}}"
+							],
+							"path": [
+								"save-movie"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 18 Aug 2023 07:37:36 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"headers\": {},\n    \"body\": \"movie uploaded successfully!!\",\n    \"statusCodeValue\": 200,\n    \"statusCode\": \"OK\"\n}"
+				}
+			]
+		},
+		{
+			"name": "delete Movie",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "SpiderMan",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{local}}{{eshaUrl}}/delete-movie",
+					"host": [
+						"{{local}}{{eshaUrl}}"
+					],
+					"path": [
+						"delete-movie"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "SUCCESS",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "3",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}{{eshaUrl}}/delete-movie",
+							"host": [
+								"{{local}}{{eshaUrl}}"
+							],
+							"path": [
+								"delete-movie"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 18 Aug 2023 07:40:12 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"headers\": {},\n    \"body\": \"movie delete successfully!!\",\n    \"statusCodeValue\": 200,\n    \"statusCode\": \"OK\"\n}"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "local",
+			"value": "localhost:8080"
+		},
+		{
+			"key": "eshaUrl",
+			"value": "/api/technical/esha"
+		}
+	]
+}
